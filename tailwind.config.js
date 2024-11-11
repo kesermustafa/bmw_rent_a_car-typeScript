@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
+      fontSize: {
+        'responsive': 'clamp(1rem, 2vw + 1rem, 2.5rem)',
+      },
       colors: {
         "black-100": "#2B2C35",
         "primary-blue": {
