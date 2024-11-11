@@ -1,6 +1,9 @@
 import Header from './components/header';
 import Hero from './components/hero';
 import Filter from "./components/filter";
+import List from "./components/list";
+
+
 
 
 const App = () => {
@@ -9,6 +12,8 @@ const App = () => {
             <Header />
             <Hero />
             <Filter/>
+            
+            <List/>
         </div>
     );
 };
