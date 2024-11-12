@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion';
 import Button from "../button";
 
-
-
 const Hero = () => {
 	return (
 		<div className="hero">
 			<div className="pt-12 padding-x flex-1 max-h-[920px]">
-				<h1 className="hero__title  ">Feel the Freedom, <br/> Start the Journey</h1>
+				<h1 className="hero__title">Feel the Freedom, <br/> Start the Journey</h1>
 				<p className="hero__subtitle">
 					Are you ready for an unforgettable journey with gold standard service?
 					You can make every moment special by crowning your car rental

@@ -8,7 +8,7 @@ import List from "./components/list";
 
 const App = () => {
     return (
-        <div className="bg-[rgb(23,23,23)] min-h-screen text-white">
+        <div className="bg-[rgb(23,23,23)] font-inter min-h-screen text-white">
             <Header />
             <Hero />
             <Filter/>
