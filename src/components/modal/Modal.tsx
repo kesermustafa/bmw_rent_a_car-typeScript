@@ -26,8 +26,9 @@ const Modal = ({car, isOpen, close}: Props) => {
 						
 						<button
 							onClick={close}
+							aria-label='Close modal'
 							className='cursor-pointer p-1 absolute end-1 top-1 z-10 bg-white rounded-full'>
-							<img src="/close.svg" alt=""/>
+							<img src="/close.svg" alt="close icon"/>
 						</button>
 						
 						<Images car={car}/>

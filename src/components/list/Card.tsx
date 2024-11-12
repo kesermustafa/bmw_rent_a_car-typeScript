@@ -55,7 +55,7 @@ const Card = ({car}: Props) => {
 						opacity: 1,
 					}}
 					
-					src={generateImage (car)} alt="Oto image" className="w-full h-full object-contain"/>
+					src={generateImage (car)} alt={car.make + car.model} className="w-full h-full object-contain"/>
 			</div>
 			
 			<div className='w-full transition'>

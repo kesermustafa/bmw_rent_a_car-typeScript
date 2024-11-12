@@ -22,7 +22,7 @@ const Field = ({img, text}  : {img:string; text:string})=>{
 			}}
 			
 			className='flex-center flex-col'>
-			<img src={img} width={25} alt=""/>
+			<img src={img} width={25} alt="icon"/>
 			<p className='capitalize'>{text}</p>
 		</motion.div>
 	)

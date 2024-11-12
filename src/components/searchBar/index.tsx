@@ -36,21 +36,27 @@ const SearchBar = () => {
 					placeholder="Marka Seciniz"
 					className="w-full text-black"/>
 				
-				<button className='ml-3 sm:hidden'>
-					<img src="/search.svg" alt="search" className='size-[40px]'/>
+				<button aria-label='search' className='ml-3 sm:hidden'>
+					<img src="/search.svg" alt="search icon" className='size-[40px]'/>
 				</button>
 			</div>
 			
 			<div className='searchbar__item'>
-				<img className='absolute ml-2 mb-1' width={35} src="/model-icon.png" alt="model-icon"/>
+				
+				<label htmlFor="model" className='absolute ml-2 mb-1'>
+					<img width={35} src="/model-icon.png" alt="search-icon"/>
+				</label>
+								
 				<input type="text"
+				       title='seacrh model'
+				       id='model'
 				       placeholder="Orn: Civic"
 				       defaultValue={params.get ("model") || ""}
 				       onChange={(e) => setModel (e.target.value)}
 				       className='searchbar__input rounded text-black'/>
 				
-				<button className='ml-3'>
-					<img src="/search.svg" alt="search" className='size-[40px]'/>
+				<button className='ml-3' aria-label='search'>
+					<img src="/search.svg" alt="right arrow search icon" className='size-[40px]'/>
 				</button>
 			</div>
 		</form>
