@@ -2,6 +2,12 @@ import { motion } from 'framer-motion';
 import Button from "../button";
 
 const Hero = () => {
+	
+	const scroll = () => {
+		const filter = document.querySelector("#filter");
+		filter?.scrollIntoView({behavior: "smooth"});
+	}
+	
 	return (
 		<div className="hero">
 			<div className="pt-12 padding-x flex-1 max-h-[920px]">
@@ -12,7 +18,9 @@ const Hero = () => {
 					experience with Gold Options.
 				</p>
 				
-				<Button designs="mt-10" title="Arabalari Kesfet"/>
+				<Button
+					handleClick={scroll}
+					designs="mt-10" title="Arabalari Kesfet"/>
 			</div>
 			<div className="flex justify-center">
 				<motion.img

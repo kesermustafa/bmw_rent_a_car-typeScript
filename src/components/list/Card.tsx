@@ -4,6 +4,7 @@ import Info from "./Info.tsx";
 import {motion} from "framer-motion";
 import Button from "../button";
 import Modal from "../modal/Modal.tsx";
+import generateImage from "../../utils/generateImage.ts";
 
 
 type Props = {
@@ -26,9 +27,9 @@ const Card = ({car}: Props) => {
 	
 	return (
 		<motion.div
-			initial={{scale:0.5, opacity:0}}
-			whileInView={{scale:1, opacity:1}}
-			transition={{duration:0.5}}
+			initial={{scale: 0.5, opacity: 0}}
+			whileInView={{scale: 1, opacity: 1}}
+			transition={{duration: 0.5}}
 			className='car-card group'>
 			
 			<h2 className='car-card__content-title'>{car.make} {car.model}</h2>
@@ -44,20 +45,17 @@ const Card = ({car}: Props) => {
 			<div>
 				<motion.img
 					initial={{
-						translateX: 200,
-						scale: 0.5,
+						scale: 0.3,
 						opacity: 0.3,
 					}}
 					
 					transition={{duration: 0.7}}
 					whileInView={{
-						translateX: 0,
 						scale: 1,
 						opacity: 1,
 					}}
 					
-					
-					src="/hero.png" alt="Oto image" className="w-full h-full object-contain"/>
+					src={generateImage (car)} alt="Oto image" className="w-full h-full object-contain"/>
 			</div>
 			
 			<div className='w-full transition'>
@@ -71,15 +69,14 @@ const Card = ({car}: Props) => {
 						designs="w-full py-[25px] text-white font-semibold"
 						title="Daha Fazla"
 						icon="right-arrow.svg"
-					
 					/>
 				</div>
-				
+			
 			</div>
-		
+			
 			
 			<Modal car={car} isOpen={isOpen} close={handleClose}/>
-			
+		
 		</motion.div>
 	);
 };
