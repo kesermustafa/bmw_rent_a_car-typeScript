@@ -3,7 +3,6 @@ import ReactSelect from 'react-select';
 import {makes} from "../../utils/constants.ts";
 import {useSearchParams} from "react-router-dom";
 
-
 const SearchBar = () => {
 	
 	const [params, setParams] = useSearchParams ();
@@ -46,7 +45,7 @@ const SearchBar = () => {
 				<label htmlFor="model" className='absolute ml-2 mb-1'>
 					<img width={35} src="/model-icon.png" alt="search-icon"/>
 				</label>
-								
+				
 				<input type="text"
 				       title='seacrh model'
 				       id='model'
